@@ -23,6 +23,7 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       title: 'Domen Brezar — Senior Quality Engineer',
+      htmlAttrs: { lang: 'en' },
       meta: [
         {
           name: 'description',
@@ -33,8 +34,12 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'Domen Brezar — Senior Quality Engineer' },
         { property: 'og:type', content: 'website' },
         { property: 'og:description', content: 'Low-latency trading infrastructure, FIX Protocol, market connectivity.' },
+        { property: 'og:url', content: 'https://xdomen.github.io/portfolio/' },
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'canonical', href: 'https://xdomen.github.io/portfolio/' },
+      ],
     },
   },
 

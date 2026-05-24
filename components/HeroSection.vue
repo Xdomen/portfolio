@@ -130,7 +130,7 @@ onMounted(async () => {
           target="_blank"
           rel="noopener noreferrer"
           class="hero-link group flex items-center gap-2.5 font-mono text-xs text-muted hover:text-primary transition-colors duration-150"
-          :aria-label="link.label"
+          :aria-label="`${link.label}: ${link.display}`"
         >
           <span
             class="text-accent shrink-0 flex items-center transition-colors duration-150"
