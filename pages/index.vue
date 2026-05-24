@@ -64,29 +64,52 @@ useSeoMeta({
   title: 'Domen Brezar — Senior Quality Engineer',
   description: 'Low-latency trading infrastructure engineer. FIX Protocol, market data systems, direct market access.',
 })
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Domen Brezar',
+        jobTitle: 'Senior Quality Engineer',
+        description: 'Low-latency trading infrastructure engineer specializing in FIX Protocol, market data systems, and direct market access.',
+        url: 'https://xdomen.github.io/portfolio/',
+        sameAs: [
+          'https://github.com/xDomen',
+          'https://www.linkedin.com/in/domen.brezar',
+        ],
+        email: 'info@blackops.si',
+      }),
+    },
+  ],
+})
 </script>
 
 <template>
   <div class="relative">
     <GridBackground />
 
-    <!-- Hero -->
-    <HeroSection />
+    <main>
+      <!-- Hero -->
+      <HeroSection />
 
-    <!-- Panel grid -->
-    <div class="panel-scroll-reveal">
-      <PanelGrid />
-    </div>
+      <!-- Panel grid -->
+      <div class="panel-scroll-reveal">
+        <PanelGrid />
+      </div>
 
-    <!-- Skills -->
-    <div class="skills-reveal">
-      <SkillsGrid />
-    </div>
+      <!-- Skills -->
+      <div class="skills-reveal">
+        <SkillsGrid />
+      </div>
+    </main>
 
     <!-- Footer -->
     <footer class="relative z-10 border-t border-edge px-6 lg:px-12 xl:px-20 py-6 flex items-center justify-between">
-      <span class="font-mono text-[10px] text-muted tracking-wider">DOMEN BREZAR · {{ new Date().getFullYear() }}</span>
-      <span class="font-mono text-[10px] text-muted tracking-wider">Senior Quality Engineer</span>
+      <span class="font-mono text-[10px] text-dim tracking-wider">DOMEN BREZAR · {{ new Date().getFullYear() }}</span>
+      <span class="font-mono text-[10px] text-dim tracking-wider">Senior Quality Engineer</span>
     </footer>
   </div>
 </template>
