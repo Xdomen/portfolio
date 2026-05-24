@@ -36,7 +36,7 @@ const statusColor = (code: number) =>
           <span class="shrink-0 font-medium" :class="statusColor(req.status)">
             {{ req.status }}
           </span>
-          <span class="shrink-0 text-muted">{{ req.statusText }}</span>
+          <span class="shrink-0 text-dim">{{ req.statusText }}</span>
         </div>
 
         <!-- Expandable response -->
@@ -45,13 +45,13 @@ const statusColor = (code: number) =>
           class="border-t border-edge px-2 py-1.5 bg-surface"
         >
           <div v-if="req.requestLines" class="mb-1">
-            <div class="text-[9px] tracking-widest text-muted mb-1">REQUEST BODY</div>
+            <div class="text-[9px] tracking-widest text-dim mb-1">REQUEST BODY</div>
             <div v-for="(line, li) in req.requestLines" :key="li" class="leading-5">
               <span v-for="(tok, ti) in line" :key="ti" :class="tok.c">{{ tok.t }}</span>
             </div>
             <div class="border-t border-edge my-1 opacity-50" />
           </div>
-          <div class="text-[9px] tracking-widest text-muted mb-1">RESPONSE</div>
+          <div class="text-[9px] tracking-widest text-dim mb-1">RESPONSE</div>
           <div v-for="(line, li) in req.responseLines" :key="li" class="leading-5">
             <span v-for="(tok, ti) in line" :key="ti" :class="tok.c">{{ tok.t }}</span>
           </div>

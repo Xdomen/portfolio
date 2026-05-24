@@ -34,7 +34,7 @@ onUnmounted(stop)
       </div>
 
       <!-- Stats bar -->
-      <div class="shrink-0 border-t border-edge px-3 py-1.5 flex gap-4 font-mono text-[10px] text-muted bg-base">
+      <div class="shrink-0 border-t border-edge px-3 py-1.5 flex gap-4 font-mono text-[10px] text-dim bg-base">
         <span>MSGS <span class="text-accent">{{ msgRate.toLocaleString() }}</span>/s</span>
         <span>BYTES <span class="text-accent">{{ byteRate }}KB</span>/s</span>
         <span>LAT <span class="text-accent">{{ latency }}ms</span></span>

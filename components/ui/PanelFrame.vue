@@ -13,7 +13,7 @@ defineProps<{
     <div class="flex items-center justify-between px-3 py-2 border-b border-edge bg-base shrink-0">
       <span class="font-mono text-[10px] tracking-widest text-dim uppercase">{{ title }}</span>
       <div v-if="status" class="flex items-center gap-1.5">
-        <span class="font-mono text-[9px] tracking-wider text-muted uppercase">{{ status }}</span>
+        <span class="font-mono text-[9px] tracking-wider text-dim uppercase">{{ status }}</span>
         <StatusDot :color="statusColor ?? 'ok'" :pulse="statusPulse ?? true" />
       </div>
     </div>

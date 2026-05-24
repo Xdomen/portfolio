@@ -2,7 +2,7 @@
   <section class="relative z-10 px-6 lg:px-12 xl:px-20 pb-20">
     <!-- Section label -->
     <div class="flex items-center gap-3 mb-8">
-      <span class="font-mono text-[10px] tracking-[0.2em] text-muted uppercase">Infrastructure</span>
+      <span class="font-mono text-[10px] tracking-[0.2em] text-dim uppercase">Infrastructure</span>
       <div class="flex-1 h-px bg-edge" />
     </div>
 

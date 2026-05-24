@@ -19,7 +19,7 @@ const categories = [
   <section class="relative z-10 px-6 lg:px-12 xl:px-20 pb-28">
     <!-- Section label -->
     <div class="flex items-center gap-3 mb-8">
-      <span class="font-mono text-[10px] tracking-[0.2em] text-muted uppercase">Technical Profile</span>
+      <span class="font-mono text-[10px] tracking-[0.2em] text-dim uppercase">Technical Profile</span>
       <div class="flex-1 h-px bg-edge" />
     </div>
 
@@ -30,7 +30,7 @@ const categories = [
         class="skills-col"
       >
         <!-- Category header -->
-        <div class="font-mono text-[9px] tracking-[0.25em] text-muted uppercase mb-4 pb-2 border-b border-edge">
+        <div class="font-mono text-[9px] tracking-[0.25em] text-dim uppercase mb-4 pb-2 border-b border-edge">
           {{ cat.label }}
         </div>
 
@@ -39,7 +39,7 @@ const categories = [
           <span
             v-for="skill in cat.skills"
             :key="skill"
-            class="skill-chip border border-edge text-muted font-mono text-[10px] tracking-wider px-2.5 py-1 uppercase cursor-default"
+            class="skill-chip border border-edge text-dim font-mono text-[10px] tracking-wider px-2.5 py-1 uppercase cursor-default"
           >{{ skill }}</span>
         </div>
       </div>

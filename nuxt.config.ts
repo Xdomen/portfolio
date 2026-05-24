@@ -7,6 +7,17 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      rollupOptions: {
+        output: {
+          // Stable font filenames so <link rel="preload"> URLs survive rebuilds
+          assetFileNames: (info) => {
+            if (info.name?.match(/\.(woff2?|ttf|otf|eot)$/)) return 'fonts/[name][extname]'
+            return '_nuxt/[name]-[hash][extname]'
+          },
+        },
+      },
+    },
   },
 
   // Disable directory-name prefixing so components/panels/FIXPanel.vue

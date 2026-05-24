@@ -6,6 +6,9 @@ onMounted(async () => {
   const { ScrollTrigger } = await import('gsap/ScrollTrigger')
   gsap.registerPlugin(ScrollTrigger)
 
+  // Defer one frame so layout is committed before ScrollTrigger reads positions
+  await new Promise<void>(r => requestAnimationFrame(() => r()))
+
   // Reveal panel grid on scroll
   gsap.from('.panel-scroll-reveal', {
     opacity: 0,
@@ -65,7 +68,19 @@ useSeoMeta({
   description: 'Low-latency trading infrastructure engineer. FIX Protocol, market data systems, direct market access.',
 })
 
+const runtimeConfig = useRuntimeConfig()
+const base = runtimeConfig.app.baseURL
+
 useHead({
+  link: [
+    {
+      rel: 'preload',
+      href: `${base}fonts/inter-latin-400-normal.woff2`,
+      as: 'font',
+      type: 'font/woff2',
+      crossorigin: '',
+    },
+  ],
   script: [
     {
       type: 'application/ld+json',

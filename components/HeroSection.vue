@@ -117,7 +117,7 @@ onMounted(async () => {
         <span
           v-for="tag in tags"
           :key="tag"
-          class="hero-tag skill-chip border border-edge text-muted font-mono text-[10px] tracking-wider px-2.5 py-1 uppercase cursor-default"
+          class="hero-tag skill-chip border border-edge text-dim font-mono text-[10px] tracking-wider px-2.5 py-1 uppercase cursor-default"
         >{{ tag }}</span>
       </div>
 
@@ -129,7 +129,7 @@ onMounted(async () => {
           :href="link.href"
           target="_blank"
           rel="noopener noreferrer"
-          class="hero-link group flex items-center gap-2.5 font-mono text-xs text-muted hover:text-primary transition-colors duration-150"
+          class="hero-link group flex items-center gap-2.5 font-mono text-xs text-dim hover:text-primary transition-colors duration-150"
           :aria-label="`${link.label}: ${link.display}`"
         >
           <span
