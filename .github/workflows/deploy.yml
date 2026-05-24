@@ -34,9 +34,6 @@ jobs:
       - name: Generate static site
         run: npm run generate
 
-      - name: Debug — list generated output
-        run: find .output/public -maxdepth 4 | sort
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
