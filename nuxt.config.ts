@@ -3,6 +3,7 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
+  modules: [],
   css: ['~/assets/css/main.css'],
 
   vite: {
@@ -37,7 +38,7 @@ export default defineNuxtConfig({
         { property: 'og:url', content: 'https://xdomen.github.io/portfolio/' },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'canonical', href: 'https://xdomen.github.io/portfolio/' },
       ],
     },

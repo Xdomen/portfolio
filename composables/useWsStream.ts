@@ -74,7 +74,7 @@ export function useWsStream() {
   const flatLines: WsLine[] = WS_SEQUENCES.flat()
 
   function tick() {
-    if (lines.value.length >= 22) {
+    if (lines.value.length >= 24) {
       lines.value.shift()
     }
     lines.value.push(flatLines[lineIndex % flatLines.length])

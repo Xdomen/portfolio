@@ -8,13 +8,13 @@
 
     <!-- 3-column panel grid -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-      <div class="panel-col-reveal min-h-[360px] lg:min-h-[440px]">
+      <div class="panel-col-reveal h-[400px] lg:h-[500px]">
         <FIXPanel class="h-full" />
       </div>
-      <div class="panel-col-reveal min-h-[360px] lg:min-h-[440px]">
+      <div class="panel-col-reveal h-[400px] lg:h-[500px]">
         <WebSocketPanel class="h-full" />
       </div>
-      <div class="panel-col-reveal min-h-[360px] lg:min-h-[440px]">
+      <div class="panel-col-reveal h-[400px] lg:h-[500px]">
         <RestAPIPanel class="h-full" />
       </div>
     </div>
